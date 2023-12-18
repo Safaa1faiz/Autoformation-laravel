@@ -1,66 +1,130 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Autoformation Laravel
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Entrez dans le monde de l'auto-apprentissage Laravel ! Ce manuel a été créé dans le but de vous orienter dans vos débuts avec Laravel et de vous fournir des ressources complémentaires pour votre parcours d'autoformation.
+ ## Pour commencer
+ 
+Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
 
-## About Laravel
+Composer : Gestionnaire de dépendances pour PHP.
+PHP : Laravel nécessite PHP 7.3.0 ou version ultérieure.
+Node.js : Laravel Mix, le compilateur d'actifs, dépend de Node.js.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Comment commencer avec Laravel ?
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Pour créer un nouveau projet Laravel, suivez les étapes ci-dessous :
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+1. Installez Laravel en utilisant Composer :
 
-## Learning Laravel
+    ```bash
+    composer create-project --prefer-dist laravel/laravel nom-du-projet
+    ```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+    Remplacez `nom-du-projet` par le nom que vous souhaitez donner à votre projet.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+2. Accédez au répertoire de votre projet :
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+    ```bash
+    cd nom-du-projet
+    ```
 
-## Laravel Sponsors
+3. Copiez le fichier d'environnement :
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+    ```bash
+    cp .env.example .env
+    ```
 
-### Premium Partners
+4. Générez la clé d'application :
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+    ```bash
+    php artisan key:generate
+    ```
 
-## Contributing
+5. Configurez votre base de données dans le fichier `.env`.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+6. Exécutez les migrations et remplissez la base de données :
 
-## Code of Conduct
+    ```bash
+    php artisan migrate --seed
+    ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+7. Lancez le serveur de développement :
 
-## Security Vulnerabilities
+    ```bash
+    php artisan serve
+    ```
+Maintenant, vous êtes prêt à commencer votre parcours d'autoformation Laravel !
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Chapitres
 
-## License
+### Vue d'ensemble de la documentation Laravel
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Ce référentiel couvre différents aspects du développement Laravel. Chaque section est liée à la documentation Laravel pertinente pour des informations approfondies.
+
+### Eloquent: Accesseurs et Mutateurs
+
+Découvrez les [accesseurs et mutateurs Eloquent](https://laravel.com/docs/eloquent-mutators) dans la documentation Laravel.
+
+### Eloquent: Seed and Factory
+
+Comprenez comment utiliser [Eloquent Seed and Factory](https://laravel.com/docs/seeding) dans Laravel pour un remplissage efficace de la base de données.
+
+### Front-end avec Vite
+
+Explorez l'intégration de [Vite](https://laravel-mix.com/docs/6.0/vite) pour le développement front-end dans Laravel.
+
+### Composants Blade
+
+Maîtrisez l'utilisation des [composants Blade](https://laravel.com/docs/blade) pour des composants de vue efficaces et réutilisables.
+
+### Laravel Breeze
+
+Commencez avec [Laravel Breeze](https://laravel.com/docs/breeze) pour une structure d'authentification minimale et élégante.
+
+### Politiques
+
+Apprenez sur les [politiques](https://laravel.com/docs/authorization) dans Laravel pour gérer la logique d'autorisation.
+
+### Fournisseur de services
+
+Comprenez le rôle d'un [fournisseur de services](https://laravel.com/docs/providers) dans l'amorçage d'une application Laravel.
+
+### Événements
+
+Explorez l'utilisation des [événements](https://laravel.com/docs/events) pour gérer différentes actions dans votre application Laravel.
+
+### Notifications
+
+Implémentez les [notifications](https://laravel.com/docs/notifications) pour envoyer des notifications sur différents canaux.
+
+### Internationalisation
+
+Gérez les traductions et l'[internationalisation](https://laravel.com/docs/localization) dans les applications Laravel.
+
+### Files d'attente
+
+Apprenez sur les [files d'attente](https://laravel.com/docs/queues) et comment gérer efficacement les tâches en arrière-plan.
+
+### Ressources API
+
+Créez et gérez les [ressources API](https://laravel.com/docs/8.x/eloquent-resources) pour construire des API puissantes.
+
+### Tests avec Laravel
+
+Explorez les capacités de test de Laravel grâce à la documentation sur les [tests](https://laravel.com/docs/testing).
+
+### Hébergement et Déploiement
+
+Comprenez le processus de [hébergement et déploiement](https://laravel.com/docs/deployment) pour les applications Laravel.
+
+### Hébergement partagé via SSH (Infomaniak)
+
+Apprenez à déployer des applications Laravel sur un hébergement partagé avec SSH en utilisant [Infomaniak](https://www.infomaniak.com/).
+
+N'hésitez pas à explorer chaque chapitre pour des informations détaillées et des exemples !
+
+## Ressources supplémentaires
+
+- [Laracasts](https://laracasts.com/series/laravel-8-from-scratch) : Une excellente ressource pour les screencasts et tutoriels vidéo Laravel.
+- [Laravel News](https://laravel-news.com/) : Restez informé des dernières actualités, tutoriels et packages Laravel.
+- [Laravel Podcast](https://www.laravelpodcast.com/) : Écoutez des discussions sur des sujets liés à Laravel.
+- [Playlist Laravel](https://youtube.com/playlist?list=PLe30vg_FG4OTxKekbWLABcpstdeCDA4LQ&si=qwpSjOJUbgHR-Goa) : playlist Laravel
